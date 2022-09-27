@@ -4,12 +4,12 @@
 #include <sstream>
 using namespace std;
 
-int main(string file_path, string motive)
+int main(int argc, char **argv)
 {
-	string file_path2 = "D:/ESIEE/E4/C++/TD1/Project1/test.txt";
-	string motive2 = "ok";
+	string file_path = argv[1];
+	string motive = argv[2];
 	ifstream Fichier_ouvert;
-	Fichier_ouvert.open(file_path2);
+	Fichier_ouvert.open(file_path);
 	int nombre_de_motif = 0;
 
 	if (Fichier_ouvert)
@@ -22,7 +22,7 @@ int main(string file_path, string motive)
 			{
 				string subs;
 				iss >> subs;
-				if (subs.find(motive2) != std::string::npos)
+				if (subs.find(motive) != std::string::npos)
 				{
 					nombre_de_motif++;
 				}
@@ -31,10 +31,9 @@ int main(string file_path, string motive)
 	}
 	else
 	{
-		cout << "The file " << file_path2 << " could not be opened." << endl;
+		cout << "The file " << file_path << " could not be opened." << endl;
 	}
 	Fichier_ouvert.close();
-	cout << "The file " << file_path2 << " contains " << nombre_de_motif << " words containing the motive " << motive2 << "." << endl;
+	cout << "The file " << file_path << " contains " << nombre_de_motif << " words containing the motive " << motive << "." << endl;
 	return 0;
-
 }
