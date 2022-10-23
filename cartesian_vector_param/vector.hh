@@ -20,10 +20,10 @@ public:
     Vector(std::initializer_list<int> pCoor);
 
 // Public Member functions here
-    Vector& operator +=(const Vector& rhs);
+    Vector& operator +=(const Vector& a);
     // More to go
     Vector& operator + (const Vector& a);
-    Vector& operator -=(const Vector& rhs);
+    Vector& operator -=(const Vector& a);
     Vector& operator - (const Vector& a);
     Vector& operator * (value a);
     value   operator * (const Vector& a);
