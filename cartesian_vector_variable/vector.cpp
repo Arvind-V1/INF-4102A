@@ -1,4 +1,4 @@
-#include "vector.hh
+#include "vector.hh"
 using namespace std;
 
 Vector::Vector(size_t N)
