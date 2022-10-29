@@ -1,7 +1,7 @@
 # INF-4102A
 Rendu exercice
 S1 :
-    is_prime_prog
+    is_prime_prog \n
     find_motive
 S2 : 
     cartesian_vector_param
